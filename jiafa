@@ -2,12 +2,23 @@
 
 int main() {
     int a, b, sum;
-    printf("请输入第一个整数：");
-    scanf("%d", &a);
-    printf("请输入第二个整数：");
-    scanf("%d", &b);
+    while (1)  // 无限循环
+    {
+        printf("=====新计算=====\n");
+        printf("请输入第一个整数（输入负数退出程序）：");
+        scanf("%d", &a);
+        // 判断输入负数，结束循环
+        if (a < 0)
+        {
+            printf("程序结束！\n");
+            break;
+        }
 
-    sum = a + b;
-    printf("两数之和 = %d\n", sum);
+        printf("请输入第二个整数：");
+        scanf("%d", &b);
+
+        sum = a + b;
+        printf("两数之和 = %d\n", sum);
+    }
     return 0;
 }
